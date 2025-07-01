@@ -1,1 +1,0 @@
-# DOLCIVA-PREMIUM-CHOCOLATE-QR-MENU Tahsin Emirhan Kavlak
