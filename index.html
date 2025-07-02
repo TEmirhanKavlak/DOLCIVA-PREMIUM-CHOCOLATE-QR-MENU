@@ -1,432 +1,520 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DOLCİVA PREMIUM CHOCOLATE</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
 <style>
-  :where([class^="ri-"])::before { content: "\f3c2"; }
-  html {
-    -webkit-text-size-adjust: 100%; /* iOS font scaling engel */
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
-  .menu-section {
-    scroll-margin-top: 70px;
-  }
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #1B4D3E;
-    border-radius: 4px;
-  }
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+.menu-section {
+scroll-margin-top: 70px;
+}
+.custom-scrollbar::-webkit-scrollbar {
+width: 4px;
+height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+background-color: #1B4D3E;
+border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+background-color: #f1f1f1;
+}
 </style>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#1B4D3E',
-          secondary: '#9BC53D',
-        },
-        borderRadius: {
-          none: '0px',
-          sm: '4px',
-          DEFAULT: '8px',
-          md: '12px',
-          lg: '16px',
-          xl: '20px',
-          '2xl': '24px',
-          '3xl': '32px',
-          full: '9999px',
-          button: '8px',
-        },
-      },
-    },
-  };
-</script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1B4D3E',secondary:'#9BC53D'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 </head>
-<body class="bg-white">
-
-<!-- Menü Ekranı -->
+<body class="bg-white text-gray-800">
+<!-- Nav Bar -->
+<nav class="fixed top-0 w-full bg-primary text-white shadow-md z-50">
+<div class="container mx-auto px-4 py-3 flex justify-center items-center">
+<h1 class="font-['Pacifico'] text-2xl">logo</h1>
+</div>
+</nav>
+<!-- Welcome Screen -->
+<section class="pt-16 px-4 min-h-screen flex flex-col">
+<!-- Header Image -->
+<div class="w-full h-48 overflow-hidden rounded-lg mb-6">
+<img src="https://readdy.ai/api/search-image?query=premium%20chocolate%20cafe%20interior%20with%20elegant%20display%20of%20pastries%20and%20desserts%2C%20soft%20lighting%2C%20cozy%20atmosphere%2C%20high-end%20chocolate%20shop%20with%20modern%20design%20elements%2C%20luxury%20cafe%20setting&width=375&height=192&seq=1&orientation=landscape" alt="DOLCİVA PREMIUM CHOCOLATE" class="w-full h-full object-cover object-center">
+</div>
+<!-- Title -->
+<div class="text-center mb-6">
+<h1 class="font-['Pacifico'] text-3xl text-primary mb-2">DOLCİVA</h1>
+<h2 class="text-xl font-semibold text-secondary">PREMIUM CHOCOLATE</h2>
+<p class="text-sm text-gray-600 mt-2">
+<i class="ri-map-pin-line ri-sm mr-1"></i> Süleyman Demirel Bulvarı, Adana
+</p>
+</div>
+<!-- About -->
+<div class="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-2">Hakkımızda</h3>
+<p class="text-gray-700 text-sm">
+DOLCİVA PREMIUM CHOCOLATE, Adana'nın kalbinde premium çikolata ve tatlı deneyimi sunan özel bir mekândır. El yapımı çikolatalarımız, özenle hazırlanan pastalarımız ve özel içeceklerimizle sizlere unutulmaz lezzetler sunuyoruz. Tüm ürünlerimiz günlük olarak, en kaliteli malzemelerle hazırlanmaktadır.
+</p>
+</div>
+<!-- Menu Button -->
+<div class="mt-4 mb-8">
+<button id="menuButton" class="w-full py-4 bg-[#FFB5C2] hover:bg-secondary transition-colors duration-300 text-white font-bold rounded-button shadow-lg flex items-center justify-center cursor-pointer">
+<i class="ri-restaurant-line ri-lg mr-2"></i>
+MENÜYÜ GÖRÜNTÜLE
+</button>
+</div>
+<!-- Today's Special -->
+<div class="mb-8">
+<h3 class="text-lg font-semibold text-primary mb-3">Günün Özel Tatlısı</h3>
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=elegant%20chocolate%20mousse%20cake%20with%20raspberry%20decoration%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=2&orientation=landscape" alt="Günün Özel Tatlısı" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Frambuazlı Çikolata Mousse</h4>
+<span class="text-[#FFB5C2] font-bold">₺85</span>
+</div>
+<p class="text-sm text-gray-600">Belçika çikolatası ile hazırlanan kadifemsi mousse, taze frambuaz ve altın varak ile süslenmiştir.</p>
+</div>
+</div>
+</div>
+<!-- Working Hours -->
+<div class="mb-8">
+<h3 class="text-lg font-semibold text-primary mb-3">Çalışma Saatleri</h3>
+<div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
+<div class="grid grid-cols-2 gap-2 text-sm">
+<div class="text-gray-600">Pazartesi - Cuma:</div>
+<div class="text-right font-medium">09:00 - 22:00</div>
+<div class="text-gray-600">Cumartesi:</div>
+<div class="text-right font-medium">10:00 - 23:00</div>
+<div class="text-gray-600">Pazar:</div>
+<div class="text-right font-medium">10:00 - 21:00</div>
+</div>
+</div>
+</div>
+<!-- Social Media -->
+<div class="mt-auto mb-20">
+<h3 class="text-lg font-semibold text-primary mb-3">Bizi Takip Edin</h3>
+<div class="flex justify-between">
+<a href="#" class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white hover:bg-[#FFB5C2] transition-colors duration-300 cursor-pointer">
+<i class="ri-instagram-line ri-xl"></i>
+</a>
+<a href="#" class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white hover:bg-[#FFB5C2] transition-colors duration-300 cursor-pointer">
+<i class="ri-facebook-line ri-xl"></i>
+</a>
+<a href="#" class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white hover:bg-[#FFB5C2] transition-colors duration-300 cursor-pointer">
+<i class="ri-twitter-x-line ri-xl"></i>
+</a>
+<a href="https://wa.me/905555555555" class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white hover:bg-[#FFB5C2] transition-colors duration-300 cursor-pointer">
+<i class="ri-whatsapp-line ri-xl"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Menu Screen (Hidden by default) -->
 <section id="menuScreen" class="fixed inset-0 bg-white z-50 pt-16 pb-20 overflow-hidden hidden">
-  <div class="h-full flex flex-col items-center justify-center px-6 bg-gradient-to-b from-primary/10 to-[#FFB5C2]/10">
-    <button id="closeMenuButton" class="absolute top-4 left-4 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center">
-      <i class="ri-arrow-left-line ri-lg text-primary"></i>
-    </button>
-    <h2 class="text-2xl font-semibold text-primary mb-8">Menü Kategorileri</h2>
-    <div class="grid grid-cols-2 gap-4 w-full max-w-md">
-      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="pastalar">
-        <div class="w-full aspect-square overflow-hidden">
-          <img src="https://readdy.ai/api/search-image?query=elegant%20cake%20display%20with%20various%20pastries%20and%20desserts%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20pastry%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=15&orientation=squarish" alt="Pastalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="p-4 bg-primary text-white text-center">
-          <span class="font-medium text-base sm:text-lg">Pastalar</span>
-        </div>
-      </button>
-      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="cikolatalar">
-        <div class="w-full aspect-square overflow-hidden">
-          <img src="https://readdy.ai/api/search-image?query=luxury%20chocolate%20truffles%20and%20pralines%20display%2C%20artisanal%20chocolate%20bonbons%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20chocolate%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=18&orientation=squarish" alt="Çikolatalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="p-4 bg-primary text-white text-center">
-          <span class="font-medium text-base sm:text-lg">Çikolatalar</span>
-        </div>
-      </button>
-      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="soguk-icecekler">
-        <div class="w-full aspect-square overflow-hidden">
-          <img src="https://readdy.ai/api/search-image?query=cold%20drinks%20display%20with%20iced%20coffee%20and%20milkshakes%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=200&height=200&seq=16&orientation=squarish" alt="Soğuk İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="p-4 bg-[#00B694] text-white text-center">
-          <span class="font-medium text-base sm:text-lg">Soğuk İçecekler</span>
-        </div>
-      </button>
-      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="sicak-icecekler">
-        <div class="w-full aspect-square overflow-hidden">
-          <img src="https://readdy.ai/api/search-image?query=hot%20drinks%20display%20with%20coffee%20and%20tea%2C%20steam%20rising%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=400&height=200&seq=17&orientation=landscape" alt="Sıcak İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="p-4 bg-[#00B694] text-white text-center">
-          <span class="font-medium text-base sm:text-lg">Sıcak İçecekler</span>
-        </div>
-      </button>
-    </div>
-  </div>
+<div class="h-full flex flex-col items-center justify-center px-6 bg-gradient-to-b from-primary/10 to-[#FFB5C2]/10">
+<button id="closeMenuButton" class="absolute top-4 left-4 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center">
+<i class="ri-arrow-left-line ri-lg text-primary"></i>
+</button>
+<h2 class="text-2xl font-semibold text-primary mb-8">Menü Kategorileri</h2>
+<div class="grid grid-cols-2 gap-4 w-full max-w-md">
+<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="pastalar">
+<div class="w-full aspect-square overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%20cake%20display%20with%20various%20pastries%20and%20desserts%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20pastry%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=15&orientation=squarish" alt="Pastalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+</div>
+<div class="p-4 bg-primary text-white text-center">
+<span class="font-medium">Pastalar</span>
+</div>
+</button>
+<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="cikolatalar">
+<div class="w-full aspect-square overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=luxury%20chocolate%20truffles%20and%20pralines%20display%2C%20artisanal%20chocolate%20bonbons%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20chocolate%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=18&orientation=squarish" alt="Çikolatalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+</div>
+<div class="p-4 bg-primary text-white text-center">
+<span class="font-medium">Çikolatalar</span>
+</div>
+</button>
+<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="soguk-icecekler">
+<div class="w-full aspect-square overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=cold%20drinks%20display%20with%20iced%20coffee%20and%20milkshakes%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=200&height=200&seq=16&orientation=squarish" alt="Soğuk İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+</div>
+<div class="p-4 bg-[#FFB5C2] text-white text-center">
+<span class="font-medium">Soğuk İçecekler</span>
+</div>
+</button>
+<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="sicak-icecekler">
+<div class="w-full aspect-[2/1] overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=hot%20drinks%20display%20with%20coffee%20and%20tea%2C%20steam%20rising%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=400&height=200&seq=17&orientation=landscape" alt="Sıcak İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+</div>
+<div class="p-4 bg-primary text-white text-center">
+<span class="font-medium">Sıcak İçecekler</span>
+</div>
+</button>
+</div>
+</div>
 </section>
-
-<!-- Menü İçerik Ekranı -->
-<section id="menuContentScreen" class="fixed inset-0 bg-white z-50 pt-16 pb-20 overflow-y-auto hidden custom-scrollbar px-4">
-
-  <!-- Pastalar -->
-  <div id="pastalar" class="menu-section hidden max-w-md mx-auto">
-    <h2 class="text-xl font-semibold text-primary mb-4 mt-2">Pastalar</h2>
-    <div class="grid grid-cols-1 gap-4 mb-8">
-      <!-- Pasta 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=elegant%20cake%20display%20with%20various%20pastries%20and%20desserts%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20pastry%20shop%20display%2C%20centered%20composition&width=375&height=200&seq=3&orientation=landscape" alt="Vanilyalı Pasta" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Vanilyalı Pasta</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺1000</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Kremalı vanilya dolgusuyla hazırlanmış hafif ve leziz pasta.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Klasik</span>
-          </div>
-        </div>
-      </div>
-      <!-- Pasta 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=tiramisu%20cake%20with%20cocoa%20powder%20dusting%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=4&orientation=landscape" alt="Tiramisu" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Tiramisu</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺900</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">İtalyan mascarpone peyniri, espresso kahve ve kakao ile hazırlanan geleneksel İtalyan tatlısı.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Klasik</span>
-          </div>
-        </div>
-      </div>
-      <!-- Pasta 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=strawberry%20cheesecake%20with%20fresh%20berries%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=5&orientation=landscape" alt="Çilekli Cheesecake" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Çilekli Cheesecake</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺80</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Kremsi peynir karışımı, bisküvi tabanı ve taze çilek sosu ile hazırlanmış cheesecake.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Mevsimsel</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Taze Meyveli</span>
-          </div>
-        </div>
-      </div>
-      <!-- Pasta 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=opera%20cake%20with%20layers%20of%20chocolate%20and%20coffee%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=6&orientation=landscape" alt="Opera" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Opera</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺85</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Badem keki, kahve kreması ve çikolata ganaj katmanlarından oluşan klasik Fransız pastası.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Fransız</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Soğuk İçecekler -->
-  <div id="soguk-icecekler" class="menu-section hidden max-w-md mx-auto">
-    <h2 class="text-xl font-semibold text-primary mb-4 mt-2">Soğuk İçecekler</h2>
-    <div class="grid grid-cols-1 gap-4 mb-8">
-      <!-- İçecek 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=iced%20chocolate%20drink%20with%20whipped%20cream%20and%20chocolate%20shavings%2C%20premium%20beverage%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=7&orientation=landscape" alt="Buzlu Çikolata" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Buzlu Çikolata</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺55</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Premium Belçika çikolatası, süt ve buz ile hazırlanan, krema ve çikolata parçacıkları ile süslenen serinletici içecek.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Özel Tarif</span>
-          </div>
-        </div>
-      </div>
-      <!-- İçecek 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=iced%20latte%20with%20caramel%20drizzle%2C%20premium%20coffee%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=8&orientation=landscape" alt="Karamelli Buzlu Latte" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Karamelli Buzlu Latte</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺50</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Espresso, soğuk süt ve ev yapımı karamel şurubu ile hazırlanan, krema ile süslenen içecek.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Yoğun</span>
-          </div>
-        </div>
-      </div>
-      <!-- İçecek 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=iced%20mocha%20coffee%20drink%2C%20premium%20beverage%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=9&orientation=landscape" alt="Buzlu Mocha" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Buzlu Mocha</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺55</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Espresso, soğuk süt, çikolata şurubu ve buz ile hazırlanan yoğun aromalı içecek.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Aromalı</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Çikolatalar -->
-  <div id="cikolatalar" class="menu-section hidden max-w-md mx-auto">
-    <h2 class="text-xl font-semibold text-primary mb-4 mt-2">Çikolatalar</h2>
-    <div class="grid grid-cols-1 gap-4 mb-8">
-      <!-- Çikolata 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=luxury%20chocolate%20truffles%20and%20pralines%20display%2C%20artisanal%20chocolate%20bonbons%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20chocolate%20shop%20display%2C%20centered%20composition&width=375&height=200&seq=18&orientation=landscape" alt="Bitter Çikolata" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Bitter Çikolata</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺75</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Yoğun kakao aromalı, %70 bitter çikolata tablet.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Yoğun</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">El Yapımı</span>
-          </div>
-        </div>
-      </div>
-      <!-- Çikolata 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=milk%20chocolate%20bar%20with%20hazelnuts%2C%20premium%20chocolate%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20chocolate%20presentation&width=375&height=200&seq=19&orientation=landscape" alt="Sütlü Çikolata" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Sütlü Çikolata</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺70</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Karamel ve fındık parçacıklı özel sütlü çikolata tablet.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Klasik</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">El Yapımı</span>
-          </div>
-        </div>
-      </div>
-      <!-- Çikolata 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=artisanal%20chocolate%20bars%20with%20nuts%20and%20dried%20fruits%2C%20luxury%20chocolate%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20chocolate%20presentation&width=375&height=200&seq=21&orientation=landscape" alt="Özel Tablet Çikolata" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Özel Tablet Çikolata</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺85</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Kuru meyveler ve kuruyemişler ile hazırlanan özel tablet çikolata (100g).</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">El Yapımı</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Glutensiz</span>
-          </div>
-        </div>
-      </div>
-      <!-- Çikolata 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=chocolate%20covered%20strawberries%20with%20elegant%20decoration%2C%20luxury%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20chocolate%20presentation&width=375&height=200&seq=22&orientation=landscape" alt="Çikolatalı Çilek" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Çikolatalı Çilek</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺95</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Taze çileklerin özel Belçika çikolatası ile kaplandığı, altın varak ile süslenen özel lezzet (6 adet).</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Taze</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sıcak İçecekler -->
-  <div id="sicak-icecekler" class="menu-section hidden max-w-md mx-auto">
-    <h2 class="text-xl font-semibold text-primary mb-4 mt-2">Sıcak İçecekler</h2>
-    <div class="grid grid-cols-1 gap-4 mb-8">
-      <!-- İçecek 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=hot%20chocolate%20with%20whipped%20cream%20and%20chocolate%20shavings%2C%20premium%20beverage%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=11&orientation=landscape" alt="Sıcak Çikolata" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Sıcak Çikolata</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺45</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Belçika çikolatası ve süt ile hazırlanan, krema ve çikolata parçacıkları ile süslenen kadifemsi içecek.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Klasik</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
-          </div>
-        </div>
-      </div>
-      <!-- İçecek 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=cappuccino%20with%20latte%20art%2C%20premium%20coffee%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=12&orientation=landscape" alt="Cappuccino" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Cappuccino</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺40</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Espresso, buharla ısıtılmış süt ve kadifemsi süt köpüğü ile hazırlanan İtalyan kahve içeceği.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">İtalyan</span>
-          </div>
-        </div>
-      </div>
-      <!-- İçecek 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=chai%20latte%20with%20cinnamon%20sprinkle%2C%20premium%20tea%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=13&orientation=landscape" alt="Chai Latte" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Chai Latte</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺45</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Hint baharatları, siyah çay ve buharla ısıtılmış süt ile hazırlanan, tarçın ile süslenen aromatik içecek.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Baharatlı</span>
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Aromatik</span>
-          </div>
-        </div>
-      </div>
-      <!-- İçecek 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
-        <img src="https://readdy.ai/api/search-image?query=turkish%20coffee%20with%20lokum%2C%20premium%20coffee%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=14&orientation=landscape" alt="Türk Kahvesi" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <div class="flex justify-between items-center mb-2">
-            <h4 class="font-semibold text-primary text-base sm:text-lg md:text-xl">Türk Kahvesi</h4>
-            <span class="text-[#FFB5C2] font-bold text-base sm:text-lg md:text-xl">₺35</span>
-          </div>
-          <p class="text-sm sm:text-base text-gray-600 mb-2">Geleneksel yöntemle hazırlanan, yanında lokum ile servis edilen Türk kahvesi.</p>
-          <div class="flex flex-wrap gap-1">
-            <span class="text-xs sm:text-sm bg-secondary/20 text-secondary px-2 py-1 rounded-full">Geleneksel</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Back Button -->
-  <div class="fixed bottom-4 left-0 right-0 flex justify-center z-50">
-    <button id="backButton" class="bg-primary text-white py-3 px-8 rounded-button shadow-lg flex items-center justify-center cursor-pointer">
-      <i class="ri-arrow-left-line ri-sm mr-2"></i> GERİ DÖN
-    </button>
-  </div>
+<!-- Menu Content Screen (Hidden by default) -->
+<section id="menuContentScreen" class="fixed inset-0 bg-white z-50 pt-16 pb-20 overflow-hidden hidden">
+<!-- Menu Navigation -->
+<div class="bg-white shadow-md fixed top-16 w-full z-10">
+<div class="flex overflow-x-auto custom-scrollbar">
+<button class="category-btn flex-shrink-0 px-4 py-3 text-gray-500 font-medium border-b-2 border-transparent" data-category="pastalar">Pastalar</button>
+<button class="category-btn flex-shrink-0 px-4 py-3 text-gray-500 font-medium border-b-2 border-transparent" data-category="cikolatalar">Çikolatalar</button>
+<button class="category-btn flex-shrink-0 px-4 py-3 text-gray-500 font-medium border-b-2 border-transparent" data-category="soguk-icecekler">Soğuk İçecekler</button>
+<button class="category-btn flex-shrink-0 px-4 py-3 text-gray-500 font-medium border-b-2 border-transparent" data-category="sicak-icecekler">Sıcak İçecekler</button>
+</div>
+</div>
+<!-- Menu Content -->
+<div class="pt-14 pb-4 px-4 h-full overflow-y-auto">
+<!-- Pastalar -->
+<div id="pastalar" class="menu-section">
+<h2 class="text-xl font-semibold text-primary mb-4 mt-2">Pastalar ve Tatlılar</h2>
+<div class="grid grid-cols-1 gap-4 mb-8">
+<!-- Pasta 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=chocolate%20mousse%20cake%20with%20elegant%20decoration%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=3&orientation=landscape" alt="Çikolatalı Mousse" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Çikolatalı Mousse</h4>
+<span class="text-[#FFB5C2] font-bold">₺75</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Belçika çikolatası ile hazırlanan kadifemsi mousse, çikolata parçacıkları ve altın varak ile süslenmiştir.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Glutensiz</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
+</div>
+</div>
+</div>
+<!-- Pasta 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=tiramisu%20cake%20with%20cocoa%20powder%20dusting%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=4&orientation=landscape" alt="Tiramisu" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Tiramisu</h4>
+<span class="text-[#FFB5C2] font-bold">₺70</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">İtalyan mascarpone peyniri, espresso kahve ve kakao ile hazırlanan geleneksel İtalyan tatlısı.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Klasik</span>
+</div>
+</div>
+</div>
+<!-- Pasta 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=strawberry%20cheesecake%20with%20fresh%20berries%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=5&orientation=landscape" alt="Çilekli Cheesecake" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Çilekli Cheesecake</h4>
+<span class="text-[#FFB5C2] font-bold">₺80</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Kremsi peynir karışımı, bisküvi tabanı ve taze çilek sosu ile hazırlanmış cheesecake.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Mevsimsel</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Taze Meyveli</span>
+</div>
+</div>
+</div>
+<!-- Pasta 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=opera%20cake%20with%20layers%20of%20chocolate%20and%20coffee%2C%20premium%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20pastry%20presentation&width=375&height=200&seq=6&orientation=landscape" alt="Opera" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Opera</h4>
+<span class="text-[#FFB5C2] font-bold">₺85</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Badem keki, kahve kreması ve çikolata ganaj katmanlarından oluşan klasik Fransız pastası.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Fransız</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Soğuk İçecekler -->
+<div id="soguk-icecekler" class="menu-section hidden">
+<h2 class="text-xl font-semibold text-primary mb-4 mt-2">Soğuk İçecekler</h2>
+<div class="grid grid-cols-1 gap-4 mb-8">
+<!-- İçecek 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=iced%20chocolate%20drink%20with%20whipped%20cream%20and%20chocolate%20shavings%2C%20premium%20beverage%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=7&orientation=landscape" alt="Buzlu Çikolata" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Buzlu Çikolata</h4>
+<span class="text-[#FFB5C2] font-bold">₺55</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Premium Belçika çikolatası, süt ve buz ile hazırlanan, krema ve çikolata parçacıkları ile süslenen serinletici içecek.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Özel Tarif</span>
+</div>
+</div>
+</div>
+<!-- İçecek 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=iced%20latte%20with%20caramel%20drizzle%2C%20premium%20coffee%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=8&orientation=landscape" alt="Karamelli Buzlu Latte" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Karamelli Buzlu Latte</h4>
+<span class="text-[#FFB5C2] font-bold">₺50</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Espresso, soğuk süt ve ev yapımı karamel şurubu ile hazırlanan, krema ile süslenen içecek.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Yoğun</span>
+</div>
+</div>
+</div>
+<!-- İçecek 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=strawberry%20milkshake%20with%20fresh%20berries%20and%20whipped%20cream%2C%20premium%20beverage%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=9&orientation=landscape" alt="Çilekli Milkshake" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Çilekli Milkshake</h4>
+<span class="text-[#FFB5C2] font-bold">₺60</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Taze çilek, premium vanilyalı dondurma ve süt ile hazırlanan, krema ve çilek parçaları ile süslenen milkshake.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Mevsimsel</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Taze Meyveli</span>
+</div>
+</div>
+</div>
+<!-- İçecek 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=iced%20matcha%20latte%20with%20milk%20foam%2C%20premium%20tea%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=10&orientation=landscape" alt="Buzlu Matcha Latte" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Buzlu Matcha Latte</h4>
+<span class="text-[#FFB5C2] font-bold">₺65</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Premium Japon matcha tozu, soğuk süt ve bal ile hazırlanan, süt köpüğü ile tamamlanan içecek.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Sağlıklı</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Çikolatalar -->
+<div id="cikolatalar" class="menu-section hidden">
+<h2 class="text-xl font-semibold text-primary mb-4 mt-2">Çikolatalar</h2>
+<div class="grid grid-cols-1 gap-4 mb-8">
+<!-- Çikolata 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=luxury%20chocolate%20truffles%20with%20gold%20dusting%2C%20artisanal%20chocolate%20bonbons%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20chocolate%20presentation&width=375&height=200&seq=19&orientation=landscape" alt="Trüf Çikolata" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Trüf Çikolata</h4>
+<span class="text-[#FFB5C2] font-bold">₺120</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Belçika çikolatası ile hazırlanan, altın varak ile süslenen özel trüf çikolatalar (6 adet).</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">El Yapımı</span>
+</div>
+</div>
+</div>
+<!-- Çikolata 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=praline%20chocolate%20selection%20box%2C%20luxury%20chocolate%20assortment%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20chocolate%20presentation&width=375&height=200&seq=20&orientation=landscape" alt="Pralin Çikolata" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Pralin Çikolata</h4>
+<span class="text-[#FFB5C2] font-bold">₺150</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Fındık, badem ve antep fıstığı ile hazırlanan özel pralin dolgulu çikolatalar (8 adet).</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Özel Koleksiyon</span>
+</div>
+</div>
+</div>
+<!-- Çikolata 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=artisanal%20chocolate%20bars%20with%20nuts%20and%20dried%20fruits%2C%20luxury%20chocolate%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20chocolate%20presentation&width=375&height=200&seq=21&orientation=landscape" alt="Özel Tablet Çikolata" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Özel Tablet Çikolata</h4>
+<span class="text-[#FFB5C2] font-bold">₺85</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Kuru meyveler ve kuruyemişler ile hazırlanan özel tablet çikolata (100g).</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">El Yapımı</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Glutensiz</span>
+</div>
+</div>
+</div>
+<!-- Çikolata 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=chocolate%20covered%20strawberries%20with%20elegant%20decoration%2C%20luxury%20dessert%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20chocolate%20presentation&width=375&height=200&seq=22&orientation=landscape" alt="Çikolatalı Çilek" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Çikolatalı Çilek</h4>
+<span class="text-[#FFB5C2] font-bold">₺95</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Taze çileklerin özel Belçika çikolatası ile kaplandığı, altın varak ile süslenen özel lezzet (6 adet).</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Taze</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sıcak İçecekler -->
+<div id="sicak-icecekler" class="menu-section hidden">
+<h2 class="text-xl font-semibold text-primary mb-4 mt-2">Sıcak İçecekler</h2>
+<div class="grid grid-cols-1 gap-4 mb-8">
+<!-- İçecek 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=hot%20chocolate%20with%20whipped%20cream%20and%20chocolate%20shavings%2C%20premium%20beverage%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=11&orientation=landscape" alt="Sıcak Çikolata" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Sıcak Çikolata</h4>
+<span class="text-[#FFB5C2] font-bold">₺45</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Belçika çikolatası ve süt ile hazırlanan, krema ve çikolata parçacıkları ile süslenen kadifemsi içecek.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Klasik</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Premium</span>
+</div>
+</div>
+</div>
+<!-- İçecek 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=cappuccino%20with%20latte%20art%2C%20premium%20coffee%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=12&orientation=landscape" alt="Cappuccino" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Cappuccino</h4>
+<span class="text-[#FFB5C2] font-bold">₺40</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Espresso, buharla ısıtılmış süt ve kadifemsi süt köpüğü ile hazırlanan İtalyan kahve içeceği.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">İtalyan</span>
+</div>
+</div>
+</div>
+<!-- İçecek 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=chai%20latte%20with%20cinnamon%20sprinkle%2C%20premium%20tea%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=13&orientation=landscape" alt="Chai Latte" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Chai Latte</h4>
+<span class="text-[#FFB5C2] font-bold">₺45</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Hint baharatları, siyah çay ve buharla ısıtılmış süt ile hazırlanan, tarçın ile süslenen aromatik içecek.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Baharatlı</span>
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Aromatik</span>
+</div>
+</div>
+</div>
+<!-- İçecek 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<img src="https://readdy.ai/api/search-image?query=turkish%20coffee%20with%20lokum%2C%20premium%20coffee%20drink%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20white%20background%2C%20high-end%20drink%20presentation&width=375&height=200&seq=14&orientation=landscape" alt="Türk Kahvesi" class="w-full h-48 object-cover">
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-semibold text-primary">Türk Kahvesi</h4>
+<span class="text-[#FFB5C2] font-bold">₺35</span>
+</div>
+<p class="text-sm text-gray-600 mb-2">Geleneksel yöntemle hazırlanan, yanında lokum ile servis edilen Türk kahvesi.</p>
+<div class="flex flex-wrap gap-1">
+<span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Geleneksel</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Back Button -->
+<div class="fixed bottom-4 left-0 right-0 flex justify-center">
+<button id="backButton" class="bg-primary text-white py-3 px-8 rounded-button shadow-lg flex items-center justify-center cursor-pointer">
+<i class="ri-arrow-left-line ri-sm mr-2"></i>
+GERİ DÖN
+</button>
+</div>
 </section>
-
 <!-- Tab Bar -->
 <div class="fixed bottom-0 w-full bg-primary text-white shadow-lg z-40">
-  <div class="grid grid-cols-2 h-16">
-    <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
-      <i class="ri-home-line ri-lg"></i>
-      <span class="text-xs mt-1">Ana Sayfa</span>
-    </a>
-    <a href="#" id="tabBarMenuButton" class="flex flex-col items-center justify-center cursor-pointer">
-      <i class="ri-restaurant-line ri-lg"></i>
-      <span class="text-xs mt-1">Menü</span>
-    </a>
-  </div>
+<div class="grid grid-cols-2 h-16">
+<a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+<i class="ri-home-line ri-lg"></i>
+<span class="text-xs mt-1">Ana Sayfa</span>
+</a>
+<a href="#" id="tabBarMenuButton" class="flex flex-col items-center justify-center cursor-pointer">
+<i class="ri-restaurant-line ri-lg"></i>
+<span class="text-xs mt-1">Menü</span>
+</a>
 </div>
-
+</div>
 <script id="menuToggle">
 document.addEventListener('DOMContentLoaded', function() {
-  const menuButton = document.getElementById('menuButton');
-  const backButton = document.getElementById('backButton');
-  const welcomeScreen = document.querySelector('section:not(#menuScreen):not(#menuContentScreen)');
-  const menuScreen = document.getElementById('menuScreen');
-  const menuContentScreen = document.getElementById('menuContentScreen');
-  const tabBarMenuButton = document.getElementById('tabBarMenuButton');
-  const categorySelectButtons = document.querySelectorAll('.category-select-btn');
-
-  function showMenu() {
-    welcomeScreen.style.display = 'none';
-    menuScreen.style.display = 'block';
-    menuContentScreen.style.display = 'none';
-  }
-
-  function showMenuContent(category) {
-    menuScreen.style.display = 'none';
-    menuContentScreen.style.display = 'block';
-    const categoryBtn = document.querySelector(`.category-btn[data-category="${category}"]`);
-    if(categoryBtn) categoryBtn.click();
-    // İlgili kategori görünür hale getiriliyor:
-    document.querySelectorAll('.menu-section').forEach(s => s.classList.add('hidden'));
-    const targetSection = document.getElementById(category);
-    if(targetSection) targetSection.classList.remove('hidden');
-  }
-
-  function hideMenu() {
-    if (menuContentScreen.style.display === 'block') {
-      menuContentScreen.style.display = 'none';
-      menuScreen.style.display = 'block';
-    } else {
-      welcomeScreen.style.display = 'flex';
-      menuScreen.style.display = 'none';
-    }
-  }
-
-  const closeMenuButton = document.getElementById('closeMenuButton');
-  closeMenuButton.addEventListener('click', hideMenu);
-  menuButton?.addEventListener('click', showMenu);
-  tabBarMenuButton.addEventListener('click', showMenu);
-  backButton.addEventListener('click', hideMenu);
-
-  categorySelectButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const category = btn.getAttribute('data-category');
-      if (category) {
-        showMenuContent(category);
-      }
-    });
-  });
+const menuButton = document.getElementById('menuButton');
+const backButton = document.getElementById('backButton');
+const welcomeScreen = document.querySelector('section:not(#menuScreen):not(#menuContentScreen)');
+const menuScreen = document.getElementById('menuScreen');
+const menuContentScreen = document.getElementById('menuContentScreen');
+const tabBarMenuButton = document.getElementById('tabBarMenuButton');
+const categorySelectButtons = document.querySelectorAll('.category-select-btn');
+function showMenu() {
+welcomeScreen.style.display = 'none';
+menuScreen.style.display = 'block';
+menuContentScreen.style.display = 'none';
+}
+function showMenuContent(category) {
+menuScreen.style.display = 'none';
+menuContentScreen.style.display = 'block';
+const categoryBtn = document.querySelector(`.category-btn[data-category="${category}"]`);
+categoryBtn.click();
+}
+function hideMenu() {
+if (menuContentScreen.style.display === 'block') {
+menuContentScreen.style.display = 'none';
+menuScreen.style.display = 'block';
+} else {
+welcomeScreen.style.display = 'flex';
+menuScreen.style.display = 'none';
+}
+}
+const closeMenuButton = document.getElementById('closeMenuButton');
+closeMenuButton.addEventListener('click', hideMenu);
+menuButton.addEventListener('click', showMenu);
+tabBarMenuButton.addEventListener('click', showMenu);
+backButton.addEventListener('click', hideMenu);
+categorySelectButtons.forEach(button => {
+button.addEventListener('click', () => {
+showMenuContent(button.dataset.category);
+});
+});
 });
 </script>
-
+<script id="categoryToggle">
+document.addEventListener('DOMContentLoaded', function() {
+const categoryButtons = document.querySelectorAll('.category-btn');
+const menuSections = document.querySelectorAll('.menu-section');
+categoryButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Remove active class from all buttons
+categoryButtons.forEach(btn => {
+btn.classList.remove('active', 'text-primary', 'border-primary');
+btn.classList.add('text-gray-500', 'border-transparent');
+});
+// Add active class to clicked button
+this.classList.add('active', 'text-primary', 'border-primary');
+this.classList.remove('text-gray-500', 'border-transparent');
+// Hide all sections
+menuSections.forEach(section => {
+section.classList.add('hidden');
+});
+// Show selected section
+const targetSection = document.getElementById(this.dataset.category);
+targetSection.classList.remove('hidden');
+});
+});
+});
+</script>
 </body>
 </html>
