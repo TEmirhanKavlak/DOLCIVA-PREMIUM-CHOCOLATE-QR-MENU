@@ -86,9 +86,9 @@ MENÜYÜ GÖRÜNTÜLE
 <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
 <div class="grid grid-cols-2 gap-2 text-sm">
 <div class="text-gray-600">Pazartesi - Cuma:</div>
-<div class="text-right font-medium">09:00 - 22:00</div>
+<div class="text-right font-medium">08:30 - 00:00</div>
 <div class="text-gray-600">Cumartesi:</div>
-<div class="text-right font-medium">10:00 - 23:00</div>
+<div class="text-right font-medium">10:00 - 00:00</div>
 <div class="text-gray-600">Pazar:</div>
 <div class="text-right font-medium">10:00 - 21:00</div>
 </div>
@@ -115,45 +115,60 @@ MENÜYÜ GÖRÜNTÜLE
 </section>
 <!-- Menu Screen (Hidden by default) -->
 <section id="menuScreen" class="fixed inset-0 bg-white z-50 pt-16 pb-20 overflow-hidden hidden">
-<div class="h-full flex flex-col items-center justify-center px-6 bg-gradient-to-b from-primary/10 to-[#FFB5C2]/10">
-<button id="closeMenuButton" class="absolute top-4 left-4 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center">
-<i class="ri-arrow-left-line ri-lg text-primary"></i>
-</button>
-<h2 class="text-2xl font-semibold text-primary mb-8">Menü Kategorileri</h2>
-<div class="grid grid-cols-2 gap-4 w-full max-w-md">
-<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="pastalar">
-<div class="w-full aspect-square overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=elegant%20cake%20display%20with%20various%20pastries%20and%20desserts%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20pastry%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=15&orientation=squarish" alt="Pastalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-</div>
-<div class="p-4 bg-primary text-white text-center">
-<span class="font-medium">Pastalar</span>
-</div>
-</button>
-<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="cikolatalar">
-<div class="w-full aspect-square overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=luxury%20chocolate%20truffles%20and%20pralines%20display%2C%20artisanal%20chocolate%20bonbons%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20chocolate%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=18&orientation=squarish" alt="Çikolatalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-</div>
-<div class="p-4 bg-primary text-white text-center">
-<span class="font-medium">Çikolatalar</span>
-</div>
-</button>
-<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="soguk-icecekler">
-<div class="w-full aspect-square overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=cold%20drinks%20display%20with%20iced%20coffee%20and%20milkshakes%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=200&height=200&seq=16&orientation=squarish" alt="Soğuk İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-</div>
-<div class="p-4 bg-[#00B694] text-white text-center">
-<span class="font-medium">Soğuk İçecekler</span>
-</div>
-</button>
-<button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="soguk-icecekler">
-<div class="w-full aspect-square overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=hot%20drinks%20display%20with%20coffee%20and%20tea%2C%20steam%20rising%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=400&height=200&seq=17&orientation=landscape" alt="Sıcak İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-</div>
-<div class="p-4 bg-[#00B694] text-white text-center">
-<span class="font-medium">Sıcak İçecekler</span>
-</div>
-</button>
+  <div class="h-full flex flex-col items-center justify-center px-6 bg-gradient-to-b from-primary/10 to-[#FFB5C2]/10">
+    
+    <button id="closeMenuButton" class="absolute top-4 left-4 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center">
+      <i class="ri-arrow-left-line ri-lg text-primary"></i>
+    </button>
+    
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-primary mb-8">Menü Kategorileri</h2>
+    
+    <div class="grid grid-cols-2 gap-4 w-full max-w-md">
+      
+      <!-- Pastalar -->
+      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="pastalar">
+        <div class="w-full aspect-square overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=elegant%20cake%20display%20with%20various%20pastries%20and%20desserts%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20pastry%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=15&orientation=squarish" alt="Pastalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="p-4 bg-primary text-white text-center">
+          <span class="font-medium text-base sm:text-lg md:text-xl">Pastalar</span>
+        </div>
+      </button>
+
+      <!-- Çikolatalar -->
+      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="cikolatalar">
+        <div class="w-full aspect-square overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=luxury%20chocolate%20truffles%20and%20pralines%20display%2C%20artisanal%20chocolate%20bonbons%2C%20professional%20food%20photography%2C%20soft%20lighting%2C%20premium%20chocolate%20shop%20display%2C%20centered%20composition&width=200&height=200&seq=18&orientation=squarish" alt="Çikolatalar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="p-4 bg-primary text-white text-center">
+          <span class="font-medium text-base sm:text-lg md:text-xl">Çikolatalar</span>
+        </div>
+      </button>
+
+      <!-- Soğuk İçecekler -->
+      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="soguk-icecekler">
+        <div class="w-full aspect-square overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=cold%20drinks%20display%20with%20iced%20coffee%20and%20milkshakes%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=200&height=200&seq=16&orientation=squarish" alt="Soğuk İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="p-4 bg-[#00B694] text-white text-center">
+          <span class="font-medium text-base sm:text-lg md:text-xl">Soğuk İçecekler</span>
+        </div>
+      </button>
+
+      <!-- Sıcak İçecekler -->
+      <button class="category-select-btn bg-white hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden flex flex-col" data-category="sicak-icecekler">
+        <div class="w-full aspect-square overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=hot%20drinks%20display%20with%20coffee%20and%20tea%2C%20steam%20rising%2C%20professional%20beverage%20photography%2C%20soft%20lighting%2C%20premium%20cafe%20display%2C%20centered%20composition&width=400&height=200&seq=17&orientation=landscape" alt="Sıcak İçecekler" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="p-4 bg-[#00B694] text-white text-center">
+          <span class="font-medium text-base sm:text-lg md:text-xl">Sıcak İçecekler</span>
+        </div>
+      </button>
+
+    </div>
+  </div>
 </section>
+
 <!-- Menu Content Screen (Hidden by default) -->
 <section id="menuContentScreen" class="fixed inset-0 bg-white z-50 pt-16 pb-20 overflow-hidden hidden">
 <!-- Menu Navigation -->
